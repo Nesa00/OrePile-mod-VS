@@ -6,7 +6,7 @@
     "Nesa"
   ],
   "description": "Upgrades ground storage for all raw ore nuggets and smelted metal bits/alloys to a 512-capacity 1:1 visual dome pile within a 1x1x1 block space.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "game": ""
   }

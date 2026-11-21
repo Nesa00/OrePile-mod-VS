@@ -8,6 +8,8 @@ import zipfile
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(SCRIPT_DIR)
 
+VERSION = "1.0.1"
+
 SEED = int(sys.argv[1]) if len(sys.argv) > 1 else random.SystemRandom().randint(1, 999999999)
 random.seed(SEED)
 elements = []
@@ -236,7 +238,7 @@ modinfo = {
     "name": "Ore Piles",
     "authors": ["Nesa"],
     "description": "Upgrades ground storage for all raw ore nuggets and smelted metal bits/alloys to a 512-capacity 1:1 visual dome pile within a 1x1x1 block space.",
-    "version": "1.0.0",
+    "version": VERSION,
     "dependencies": {"game": ""}
 }
 with open(modinfo_path, "w", encoding="utf-8") as f:
@@ -245,9 +247,9 @@ with open(modinfo_path, "w", encoding="utf-8") as f:
 # 4. Write README.md
 readme_path = os.path.join(SCRIPT_DIR, "README.md")
 readme_lines = [
-    "# Ore Piles (512-Capacity Nugget & Metal Bit Ground Storage)",
+    "# Vintage Story mod Ore Piles (512-Capacity Nugget & Metal Bit Ground Storage)",
     "",
-    "A Vintage Story mod by **Nesa** that upgrades ground storage for all raw ore nuggets and smelted metal bits/alloys into a 1:1 visual dome pile holding up to **512 items** within a single `1x1x1` block space.",
+    "![Mod screenshot from game](modicon.png){width=500}",
     "",
     "## Features",
     "",
@@ -277,15 +279,14 @@ readme_lines = [
     "",
     "## Installation",
     "",
-    "1. Place `OrePiles-1.0.0.zip` into your Vintage Story `Mods` folder (`%AppData%\\VintagestoryData\\Mods` on Windows or `~/.config/VintagestoryData/Mods` on Linux).",
+    f"1. Place `OrePiles-{VERSION}.zip` into your Vintage Story `Mods` folder (`%AppData%\\VintagestoryData\\Mods` on Windows or `~/.config/VintagestoryData/Mods` on Linux).",
     "2. Enable **Ore Piles** in the Mod Manager and load your world.",
 ]
 
 with open(readme_path, "w", encoding="utf-8") as f:
     f.write("\n".join(readme_lines) + "\n")
 
-# 5. Package everything into OrePiles-1.0.0.zip (including modicon.png from the same folder)
-zip_path = os.path.join(SCRIPT_DIR, "OrePiles-1.0.0.zip")
+zip_path = os.path.join(SCRIPT_DIR, f"OrePiles-{VERSION}.zip")
 icon_path = os.path.join(SCRIPT_DIR, "modicon.png")
 assets_dir = os.path.join(SCRIPT_DIR, "assets")
 
