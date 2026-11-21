@@ -1,6 +1,6 @@
 # Vintage Story mod Ore Piles (512-Capacity Nugget & Metal Bit Ground Storage)
 
-![Mod screenshot from game](modicon.png){width=500}
+![Mod screenshot from game](modicon.png)
 
 ## Features
 
