@@ -1,5 +1,6 @@
 # Ore Piles (512-Capacity Nugget & Metal Bit Ground Storage)
 
+![Mod screenshot from game](modicon.png){width=500}
 
 ## Features
 
@@ -27,7 +28,11 @@ To reproduce this exact layout, run:
 py make-pile.py 841027957
 ```
 
+## Tested
+
+- **Only Windows for now**
+
 ## Installation
 
-1. Place `OrePiles-1.0.0.zip` into your Vintage Story `Mods` folder (`%AppData%\VintagestoryData\Mods` on Windows or `~/.config/VintagestoryData/Mods` on Linux).
+1. Place `OrePiles-1.0.0.zip` into your Vintage Story `Mods` folder (`%AppData%\VintagestoryData\Mods`).
 2. Enable **Ore Piles** in the Mod Manager and load your world.
